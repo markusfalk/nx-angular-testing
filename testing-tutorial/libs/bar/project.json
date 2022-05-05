@@ -1,0 +1,38 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/bar/src",
+  "prefix": "testing-tutorial",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/bar"],
+      "options": {
+        "project": "libs/bar/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/bar/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/bar/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/bar"],
+      "options": {
+        "jestConfig": "libs/bar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/bar/**/*.ts", "libs/bar/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

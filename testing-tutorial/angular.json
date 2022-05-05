@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "angular-testing-modules": "apps/angular-testing-modules",
-    "angular-testing-modules-e2e": "apps/angular-testing-modules-e2e"
+    "angular-testing-modules-e2e": "apps/angular-testing-modules-e2e",
+    "bar": "libs/bar",
+    "foo": "libs/foo"
   }
 }
